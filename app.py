@@ -14,8 +14,8 @@ db = SQLAlchemy(app)
 # Translator class
 class Translator:
     def __init__(self):
-        self.url = 'https://sandbox.unbabel.com/tapi/v2/translation/'
-        self.header = {'Authorization': 'ApiKey fullstack-challenge:9db71b322d43a6ac0f681784ebdcc6409bb83359'}
+        self.url = "https://sandbox.unbabel.com/tapi/v2/translation/"
+        self.header = {"Authorization": "ApiKey fullstack-challenge:9db71b322d43a6ac0f681784ebdcc6409bb83359"}
 
     # Translate english phrase
     def translate_eng(self, data):
@@ -25,13 +25,13 @@ class Translator:
         if response.status_code == 200 or response.status_code == 201:
             return response.json()
         else:
-            return response.json
+            return response.json()
 
     # Translated phrase
     @staticmethod
     def get_translation(uid):
-        url = 'https://sandbox.unbabel.com/tapi/v2/translation/' + uid
-        header = {'Authorization': 'ApiKey fullstack-challenge:9db71b322d43a6ac0f681784ebdcc6409bb83359'}
+        url = "https://sandbox.unbabel.com/tapi/v2/translation/" + uid
+        header = {"Authorization": "ApiKey fullstack-challenge:9db71b322d43a6ac0f681784ebdcc6409bb83359"}
         translated = requests.get(url=url, headers=header)
         if translated.status_code == 200:
             return translated.json()
