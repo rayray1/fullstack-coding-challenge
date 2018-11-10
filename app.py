@@ -24,9 +24,7 @@ class Translator:
         response = requests.post(url=self.url, headers=self.header, data=payload)
         if response.status_code == 200 or response.status_code == 201:
             return response.json()
-        else:
-            return response.json()
-
+        
     # Translated phrase
     @staticmethod
     def get_translation(uid):
