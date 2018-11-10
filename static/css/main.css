@@ -1,0 +1,17 @@
+body{
+ background-color: #eee;
+}
+.app-header{
+    background-color: #feee;
+    color: black;
+    padding: 10px;
+}
+.app-form-alert{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    max-width: 480px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 7px;
+}
